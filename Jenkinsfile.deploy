@@ -4,6 +4,7 @@ pipeline {
       stage('Deploy') {
          steps {
             echo 'logic'
+            echo 'logic1'
          }
       }
    }
