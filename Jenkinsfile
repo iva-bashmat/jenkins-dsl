@@ -24,8 +24,6 @@ pipeline {
             }
             stage ('Init deploy build'){
                 steps {
-                    sh "pwd"
-                    sh "ls"
                     jobDsl targets: 'deploy.groovy'
                 }
             }
