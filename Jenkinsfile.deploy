@@ -15,5 +15,11 @@ pipeline {
             echo 'logic1'
          }
       }
+      stage('Deploy1') {
+         steps {
+            echo 'logic'
+            echo 'logic1'
+         }
+      }
    }
 }
