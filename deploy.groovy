@@ -2,7 +2,9 @@ pipelineJob('deploy') {
    definition {
       cps {
          script(readFileFromWorkspace('Jenkinsfile.deploy'))
-         sandbox(true)
+         parameters {
+            stringParam('INPUT', 'Whatever dsl')
+         }
       }
    }
 }
