@@ -24,8 +24,7 @@ pipeline {
             }
             stage ('Init deploy build'){
                 steps {
-                    jobDsl targets: 'deploy.groovy',
-                        sandbox: true
+                    jobDsl targets: 'deploy.groovy'
                 }
             }
           }
