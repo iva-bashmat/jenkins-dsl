@@ -25,7 +25,7 @@ pipeline {
             stage ('Init deploy build'){
                 steps {
                     sh "cat deploy.groovy"
-                    sh "Jenkinsfile.deploy"
+                    sh "cat Jenkinsfile.deploy"
                     jobDsl targets: 'deploy.groovy'
                 }
             }
