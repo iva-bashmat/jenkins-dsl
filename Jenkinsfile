@@ -26,7 +26,7 @@ pipeline {
                 steps {
                     sh "pwd"
                     sh "ls"
-                    jobDsl targets: ['deploy.groovy']
+                    jobDsl targets: 'deploy.groovy'
                 }
             }
           }
