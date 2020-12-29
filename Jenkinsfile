@@ -14,11 +14,22 @@ pipeline {
 
    stages {
       stage('Initialize') {
-         steps {
-            script {
-               buildName "${BUILD_NAME}"
+          parallel {
+            stage ('Init properties'){
+                steps {
+                    script {
+                        buildName "${BUILD_NAME}"
+                     }
+                }
             }
-         }
+            stage ('Init deploy build'){
+                steps {
+                    sh "pwd"
+                    sh "ls"
+                    jobDsl targets: ['deploy.groovy']
+                }
+            }
+          }
       }
 
       stage('Build') {
