@@ -14,16 +14,6 @@ pipeline {
             echo 'logic'
          }
       }
-      stage('Deploy1') {
-         steps {
-            echo 'logic1'
-         }
-      }
-      stage('Deploy2') {
-         steps {
-            echo 'logic2'
-         }
-      }
       stage('Deploy-test') {
          steps {
             echo 'logic-test'
