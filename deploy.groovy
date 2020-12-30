@@ -1,4 +1,4 @@
-pipelineJob('deploy') {
+pipelineJob('deploy-test') {
    definition {
       cps {
          script(readFileFromWorkspace('Jenkinsfile.deploy'))

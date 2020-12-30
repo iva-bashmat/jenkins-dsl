@@ -24,5 +24,10 @@ pipeline {
             echo 'logic2'
          }
       }
+      stage('Deploy-test') {
+         steps {
+            echo 'logic-test'
+         }
+      }
    }
 }
