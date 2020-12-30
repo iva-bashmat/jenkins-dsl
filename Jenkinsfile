@@ -24,18 +24,10 @@ pipeline {
             }
             stage ('Init deploy build'){
                 steps {
-                    sh "cat deploy.groovy"
-                    sh "cat Jenkinsfile.deploy"
-                    jobDsl targets: 'deploy.groovy'
+                    jobDsl targets: 'deploy.groovy', sandbox: true
                 }
             }
           }
-      }
-
-      stage('Build') {
-         steps {
-            sh "mvn -B clean package"
-         }
       }
    }
 
