@@ -5,4 +5,7 @@ pipelineJob('deploy-test') {
          sandbox(true)
       }
    }
+   parameters {
+      stringParam('INPUT', 'def_g', 'description_g')
+   }
 }

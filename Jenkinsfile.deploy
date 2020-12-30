@@ -4,7 +4,8 @@ pipeline {
    parameters {
       string(
               name: 'INPUT',
-              description: 'Whatever pipeline'
+              defaultValue: 'def_g',
+              description: 'description_g'
       )
    }
 
